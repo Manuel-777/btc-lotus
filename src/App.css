@@ -1,0 +1,190 @@
+body {
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  background: url("./assets/black-lotus-vintage.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.btc {
+  width: 4em;
+  height: 4em;
+  background: url("./assets/btc.png");
+  background-position: center;
+  background-size: cover;
+  margin: 24px auto;
+  margin-top: 16px;
+}
+
+.content {
+  display: flex;
+  width: 34em;
+  max-width: calc(100% - 16px);
+  height: 22em;
+  border-radius: 8px;
+  background: #332c48;
+  margin: auto;
+  box-shadow: 0px 9px 20px 5px #0000004f;
+  color: #fffae4;
+  font-size: 1.1em;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+.credit {
+  position: absolute;
+  width: 20em;
+  left: calc(50% - 10em);
+  border-radius: 5px;
+  bottom: 16px;
+  color: #fffae4;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.1em;
+  background-color: #332c48;
+  padding: 8px;
+}
+
+.qr-code {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  background-position: center;
+  background-size: cover;
+  background-image: url("./assets/qr.png");
+}
+
+.qr-code-container {
+  width: 340px;
+  padding: 16px;
+  overflow: hidden;
+  height: 192px;
+  bottom: 16px;
+  right: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 4px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 1200px) {
+  .qr-code-container {
+    font-size: 0.8em;
+    height: 140px;
+    width: 260px;
+  }
+  
+  .qr-code {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+
+  .cards {
+    top: -120px;
+  }
+
+  .qr-code-container {
+    width: calc(100% - 64px);
+    bottom: 64px;
+  }
+
+  .credit {
+    width: calc(100% - 48px);
+    left: 16px;
+    overflow: hidden;
+  }
+
+  .content {
+    margin: 16px auto;
+    height: calc(100% - 320px);
+  }
+}
+
+.cards {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  -o-transition: -o-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms, -o-transform 200ms;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.card-1 {
+  background-image: url(./assets/lea-black-lotus.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 285px;
+  height: 396px;
+  border-radius: 6.75% / 6.5%;
+  transform: rotateY(-15deg) rotateX(10deg) translate3d(-70px, 0, -100px);
+  z-index: 1;
+}
+
+.card-2 {
+  background-image: url(./assets/2ed-black-lotus.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 285px;
+  height: 396px;
+  border-radius: 6.75% / 6.5%;
+  transform: rotateY(0) rotateX(10deg) translate3d(0px, -10px, -120px);
+  z-index: 2;
+}
+
+.card-3 {
+  background-image: url(./assets/leb-black-lotus.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 285px;
+  height: 396px;
+  border-radius: 6.75% / 6.5%;
+  transform: rotateY(15deg) rotateX(10deg) translate3d(70px, 0, -100px);
+  z-index: 1;
+}
+
